@@ -1,0 +1,73 @@
+//
+// This component restructures has 2 very different layouts:
+// 
+// MOBILE:
+//  - MAP / LIST views with a fixed button to convert between. 
+//  - The date filters are on both views
+//  
+// DESKTOP:
+//  - Main panel is split in half, map on left, list on right
+//  - Date filters only on the left side
+//
+
+.trip-list-container {
+  height: 600px;
+
+  .left-panel, .right-panel {
+    width: 50%;
+    height: 100%;
+  }
+
+  .left-panel > .date-filters {
+    display: none;
+  }
+
+  .trip-list {
+    height: calc(600px - 70px);
+    overflow-y: auto;
+  }
+
+  // Hide active panel switch button on desktop
+  .active-panel-switch-btn {
+    display: none;
+  }
+}
+
+// On mobile, show either the map or the list (not both)
+@media (max-width: 800px) {
+
+  // Show/Hide the two panels in each mode
+  .MAP > .left-panel {
+    width: 100%;
+  }
+  .MAP > .right-panel {
+    display: none;
+  }
+  .LIST > .right-panel {
+    width: 100%;
+  }
+  .LIST > .left-panel {
+    display: none;
+  }
+
+  .trip-list-container {
+
+    .left-panel > .date-filters {
+      display: flex;
+    }
+
+    .trip-list {
+      height: 100%;
+      overflow-y: visible;
+    }
+
+    // Show active panel switch button on mobile
+    .active-panel-switch-btn {
+      display: block;
+      position: fixed;
+      z-index: 999999;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

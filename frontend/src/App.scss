@@ -1,0 +1,203 @@
+html {
+  font-family: 'Roboto', ProximaNova, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  background: #fff;
+  color: #666;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar-main {
+  // Overwrite the default height of uk-navbar
+  height: 80px !important;
+}
+
+h1,
+.uk-h1 {
+  font-size: 32.3px;
+  line-height: 1.2;
+}
+
+.avatar-big {
+  height: 120px;
+  width: 120px;
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .author {
+    display: none;
+  }
+
+  .flatpickr-calendar.showTimeInput.open {
+    left: 0 !important;
+  }
+}
+
+.author {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  z-index: 8;
+  border-top: 1px solid #c5c5c5;
+  border-left: 1px solid #c5c5c5;
+  background: white;
+}
+
+#root > main.uk-container {
+  min-height: 80vh;
+}
+
+.uk-navbar {
+  height: 70px;
+}
+
+.trip-title {
+  margin-left: 3px;
+}
+
+.centered-hero {
+  text-align: center;
+}
+
+.leaflet-div-icon {
+  background: none !important;
+  border: none !important;
+}
+
+.date-range > div {
+  width: 36px;
+  height: 36px;
+  font-size: 12px;
+  text-align: center;
+  background: black;
+  color: white;
+  margin: 2px;
+}
+
+.icon-sm {
+  transform: scale(0.6);
+}
+
+.fullscreen-mobile-menu {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: black;
+  color: white;
+  z-index: 99999;
+}
+
+.fullscreen-mobile-menu h4,
+.fullscreen-mobile-menu .icono-cross {
+  color: white;
+}
+
+.new-trip-form {
+  align-items: flex-start;
+}
+
+@media (max-width: 700px) {
+  .new-trip-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-trip-form > * {
+    margin-top: 20px !important;
+  }
+}
+
+.flatpickr-input {
+  text-align: center;
+  margin-left: 1em !important;
+  margin-right: 1em !important;
+  max-width: 250px !important;
+}
+
+.country-picker {
+  margin-top: 0 !important;
+  min-width: 250px;
+}
+
+@media (max-width: 700px) {
+  .profile-details {
+    flex-direction: column;
+  }
+
+  .profile-details > .user-icons {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
+
+.user-icons {
+  margin: auto;
+}
+
+.trip-actions {
+  padding-bottom: 10px;
+
+  button {
+    margin-right: 10px;
+  }
+
+  span {
+    color: black;
+  }
+}
+
+.user-icons > button {
+  background: none;
+}
+
+.user-icons > .icon-sm > div {
+  margin-left: 3px;
+}
+
+.uk-range::-moz-range-thumb {
+  background: #cccccc !important;
+}
+.uk-range::-ms-thumb {
+  background: #cccccc !important;
+}
+.uk-range::-ms-thumb {
+  background: #cccccc !important;
+}
+.uk-range::-webkit-slider-thumb {
+  background: #cccccc !important;
+}
+
+.background-glow {
+  background: #c3cfe6;
+}
+
+.margin-unset {
+  margin: initial !important;
+}
+
+.outlined {
+  margin: 0px !important;
+  width: auto !important;
+  padding-left: 20px;
+  // border: 1px solid #e5e5e5;
+  height: 22px;
+
+  span[role="img"] {
+    margin-left: 4px;
+    margin-right: 8px;
+  }
+}

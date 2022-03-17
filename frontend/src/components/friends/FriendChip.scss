@@ -1,0 +1,77 @@
+.avatar-preview {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.avatar-preview p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.chip-label {
+  margin-left: 8px;
+}
+
+.friend-chip {
+  margin-right: 5px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  .tooltip {
+    background: black;
+    bottom: 100%;
+    color: #fff;
+    display: block;
+    left: -25px;
+    margin-bottom: 15px;
+    opacity: 0;
+    padding: 4px;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(10px);
+    transition: all 0.25s ease-out;
+
+    font-size: 12px;
+    width: 120px;
+    text-align: center;
+  }
+
+  /* This bridges the gap so you can mouse into the tooltip without it disappearing */
+  .tooltip:before {
+    bottom: -20px;
+    content: ' ';
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  /* CSS Triangles */
+  .tooltip:after {
+    border-left: solid transparent 10px;
+    border-right: solid transparent 10px;
+    border-top: solid black 10px;
+    bottom: -10px;
+    content: ' ';
+    height: 0;
+    left: 50%;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+  }
+
+}
+
+.friend-chip:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+}

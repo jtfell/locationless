@@ -1,0 +1,7 @@
+
+DATE=$(date+\%Y\%m\%d\%H\%M\%S)
+
+mv backup-tmp/latest.sql.gz backup-tmp/previous.sql.gz
+
+sudo -u postgres pg_dump | gzip > backup-tmp/latest.sql.gz
+sudo gsutil cp backup-tmp/latest.sql.gz gs://locationless-backup/$DATE.sql.gz

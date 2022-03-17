@@ -1,0 +1,18 @@
+.friend-card {
+  width: 350px !important;
+  margin-right: 10px;
+  margin-top: 0 !important;
+
+  .uk-text-small {
+    margin-left: 20px;
+    color: #666;
+  }
+}
+
+.friend-card.small {
+  width: 180px !important;
+
+  .uk-padding {
+    padding: 10px;
+  }
+}

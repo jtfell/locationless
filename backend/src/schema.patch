@@ -1,0 +1,28 @@
+diff --git a/src/schema.rs b/src/schema.rs
+index 15eabfa..9ef0974 100644
+--- a/src/schema.rs
++++ b/src/schema.rs
+@@ -41,15 +41,23 @@ table! {
+         photo_url -> Nullable<Text>,
+         created -> Timestamptz,
+         updated -> Timestamptz,
+     }
+ }
+ 
++table! {
++    matches (trip_a, trip_b) {
++        trip_a -> Int4,
++        trip_b -> Int4,
++    }
++}
++
+ joinable!(trips -> cities (city));
+ joinable!(trips -> users (user));
+ 
+ allow_tables_to_appear_in_same_query!(
+     cities,
+     friendships,
++    matches,
+     trips,
+     users,
+ );

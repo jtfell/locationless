@@ -1,0 +1,12 @@
+[Unit]
+Description=locationless-app
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+EnvironmentFile=/home/jtfell/.env
+ExecStart=/home/jtfell/backend
+
+[Install]
+WantedBy=multi-user.target

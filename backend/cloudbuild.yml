@@ -1,0 +1,9 @@
+timeout: 1800s
+steps:
+- name: 'rust'
+  args: ['cargo', 'build', '--release']
+  timeout: 1800s
+artifacts:
+  objects:
+    location: 'gs://locationless/'
+    paths: ['target/release/backend']
